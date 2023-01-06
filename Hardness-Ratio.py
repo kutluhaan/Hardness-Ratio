@@ -1,3 +1,4 @@
+#First part 
 #imported modules
 from astropy.io import fits
 from astropy.visualization import ZScaleInterval
@@ -59,6 +60,7 @@ axes_miri[1].imshow(miri_image_data, vmin = z_miri1, vmax = z_miri2) #projecting
 
 print("First image is NIRCam image" + "\n" + "Last image is MIRI image")
 
+#Part Two
 #CutOut2D initializing
 x_miri_center = 1300.003016955477 #assigning the x value of center of MIRI image
 y_miri_center = 589.933975818463 #assigning the y value of center of MIRI image
@@ -100,6 +102,7 @@ fig_nir, axes_nir = plt.subplots(nrows = 1, ncols =2)
 axes_nir[1].imshow(cutout_nircam.data, vmin = z_nir1, vmax = z_nir2)
 axes_nir[0].imshow(cutout_nircam.data, vmin = z_nir1, vmax = z_nir2)
 
+#Part Three
 # degrading the values of NIRCam image
 # degrading NIRCam in y axis
 new_nircam = [[0 for y in range(102)] for x in range(1734)]  # initializing a matrix
@@ -142,6 +145,7 @@ fig_nir, axes_nir = plt.subplots(nrows=1, ncols=2)
 axes_nir[1].imshow(new_new_nircam, vmin=z_nir1, vmax=z_nir2)
 axes_nir[0].imshow(new_new_nircam, vmin=z_nir1, vmax=z_nir2)
 
+#Part Four
 # degrading the values of MIRI image
 # degrading MIRI in y axis
 new_miri = [[0 for y in range(102)] for x in range(1020)]  # initializing a matrix
@@ -192,6 +196,7 @@ fig_mir, axes_mir = plt.subplots(nrows=1, ncols=2)
 axes_miri[1].imshow(cutout_miri.data, vmin=z_miri1, vmax=z_miri2)
 axes_miri[0].imshow(cutout_miri.data, vmin=z_miri1, vmax=z_miri2)
 
+#Part Five
 #normalization of MIRI and NIRCAM image
 new_new_nircam2 = [[0 for y in range(102)] for x in range(102)]  #initialize a new matrix
 new_new_miri2 = [[0 for y in range(102)] for x in range(102)]  #initialize a new matrix
@@ -200,6 +205,7 @@ for i in range (102):
         new_new_miri2[i][j] = new_new_miri[i][j] / maxvalue_miri #assigning the last version matrix to the new density matrix
         new_new_nircam2[i][j] = new_new_nircam[i][j] / maxvalue_nircam #assigning the last version matrix to the new density matrix
 
+#Part Six
 # creating the final image
 final_image = [[0 for y in range(102)] for x in range(102)]  # initialize a new matrix
 for i in range(102):
