@@ -1,5 +1,5 @@
 🔭 Hardness Ratio: Comparing Cosmic Images
-📝 What's This All About?
+📝 What is This All About?
 Welcome to the Hardness Ratio project! This repository contains a Python script designed to help astronomers and data enthusiasts analyze astronomical images. Our goal is to compare two images of the same area of space, taken at different wavelengths by the MIRI and NIRCam instruments on the James Webb Space Telescope. By dividing one image's data matrix by the other, we can create a "hardness ratio" matrix and a visual projection of it. This is a crucial step in understanding the properties of celestial objects.
 
 🚀 What Can It Do?
